@@ -1,0 +1,13 @@
+###### Camera Calibration File For Rayan's datasets ######
+image_width: 713
+image_height: 1267
+camera_name: /versavis/cam0
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [317.2094821809144, 0.0, 633.5, 0.0, 317.2094821809144, 356.5, 0.0, 0.0, 1.0]
+distortion_model: equidistant
+distortion_coefficients:
+  rows: 1
+  cols: 4
+  data: [0.0, 0.0, 0.0, 0.0]

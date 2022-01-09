@@ -26,5 +26,10 @@ rovio_custom.info
 *~
 .*
 
+#ROS stuff
+devel/
+logs/
+build/
+
 html/
 latex/

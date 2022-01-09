@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<launch>
+  <remap from="/imu" to="/versavis/imu"/>
+  <remap from="/cam0/image_raw" to="/versavis/cam0/image_raw"/>
+  <node pkg="rovio" type="rovio_rosbag_loader" name="rovio" output="screen">
+  <param name="filter_config" value="$(find rovio)/cfg/rovio_vamr.info"/>
+  <param name="camera0_config" value="$(find rovio)/cfg/vamr_cam.yaml"/>
+  <param name="rosbag_filename" value="/home/davidoort/git/VAMR_VO_project/data/custom/bags/sph_walk_chair_front_cam/sph_walk_chair_front_cam.bag"/>
+  <param name="imu_topic_name" value="/versavis/imu"/>
+  <param name="cam0_topic_name" value="/versavis/cam0/image_raw"/>
+  </node>
+</launch>
