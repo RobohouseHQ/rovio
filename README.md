@@ -7,12 +7,16 @@
 5. Clone the kindr repository as another ROS package in the rovio workspace with `cd ~/rovio_ws/src/ && git clone https://github.com/ethz-asl/kindr`
 6. Build the ROS workspace with `cd ~/rovio_ws/ && catkin build rovio --cmake-args -DCMAKE_BUILD_TYPE=Release`. If you encounter issues related to Python in this step, the following build command solved our issue: `catkin build -DPYTHON_EXECUTABLE=/usr/bin/python3 -DPYTHON_INCLUDE_DIR=/usr/include/python3.8m`
 7. Source the workspace with `source devel/setup.bash`
+8. Download our [custom dataset](https://drive.google.com/file/d/1MV3-MhPpD8kvCPuly7KoNCw_j9cA4dab/view?usp=sharing) or your own. You will setup the paths to the rosbags in this dataset in the next step. 
 
 ### Running
 We ran ROVIO on a rosbag with monocular camera data (both distorted and undistorted) and IMU data.
 If you want to do something similar, 
 1. follow the template of [rovio_vamr.info](cfg/rovio_vamr.info) (for the pre-calibrated extrinsics), [vamr_cam.yaml](cfg/vamr_cam.yaml) or [vamr_cam_undistorted.yaml](cfg/vamr_cam_undistorted.yaml) for the instristics, and [rovio_vamr.launch](launch/rovio_vamr.launch) for the launchfile.
 2. When you are done with configuring, run `roslaunch rovio rovio_vamr.launch`
+
+### Sample result
+If you run one of our launch files with our dataset, you should observe something like in [this video](https://youtu.be/_WUWks9dkYk). Note that we have not done any tuning and that these out-of-the-box results are not exemplary in terms of accuracy.
 
 ## ROVIO
 
